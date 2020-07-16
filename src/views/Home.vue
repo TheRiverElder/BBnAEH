@@ -1,7 +1,6 @@
 <template>
-  <TopBarWrapper>
+  <TopBarWrapper title="老江的音频提取助手">
     <div class="home">
-      <h1>老江的音频提取助手</h1>
       <router-link class="button" to="/WorkspacePicker">开始</router-link>
       <div class="introduction">
         <h2>食用方法</h2>
