@@ -6,11 +6,20 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "server": "node ./server.js"
+    "server": "node ./server.js",
+    "test": "node tools/test-songtitle.cjs && node tools/test-server.cjs && node tools/test-adb.cjs",
+    "test:server": "node tools/test-server.cjs",
+    "test:songtitle": "node tools/test-songtitle.cjs",
+    "test:adb": "node tools/test-adb.cjs",
+    "title:data": "node tools/build-abstractor-data.mjs",
+    "title:data:check": "node tools/build-abstractor-data.mjs --check",
+    "title:eval": "node tools/eval-songtitle.cjs"
   },
   "dependencies": {
     "axios": "^0.19.2",
+    "body-parser": "^1.19.0",
     "core-js": "^3.6.5",
+    "express": "^4.17.1",
     "opn": "^6.0.0",
     "vue": "^2.6.11",
     "vue-router": "^3.2.0"

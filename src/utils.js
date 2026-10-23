@@ -1,4 +1,13 @@
 
+// 旧版曲名提取逻辑（关键字匹配），完整保留。
+// 新的默认引擎在 src/songTitle.js（词典 + 括号感知分词 + 排序器），
+// 这里不再改动行为，只作为「旧版」选项与智能引擎失败时的回退。
+//
+// 注意：旧逻辑按标点切段后取「最长的非歌手段」当歌名，因此
+//   - 只认下面列出的 12 位歌姬 / 3 个组合，其余歌手会漏掉；
+//   - 歌名里带括号、斜杠、破折号时会被切断；
+//   - 输出固定为 `歌手 & 歌手 - 歌名`。
+
 // 单个歌姬的正式名称
 // const SINGERS = [
 //     '洛天依',
@@ -77,4 +86,6 @@ function predicateSongName(title) {
 
 export {
     predicateSongName,
+    // 语义更明确的别名：新代码统一走 src/songTitle.js，这里保留旧实现以便对照/回退。
+    predicateSongName as predicateSongNameLegacy,
 };

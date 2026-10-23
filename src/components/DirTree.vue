@@ -63,7 +63,8 @@ export default {
 
   methods: {
       loadItems() {
-          axios.get(state.urlDirList + `?path=${this.path}`)
+          this.err = null;
+          axios.get(state.urlDirList, { params: { path: this.path } })
           .then(res => this.list = res.data.succeed ? res.data.list : [])
           .catch(e => this.err = e);
       },

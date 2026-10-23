@@ -1,0 +1,6 @@
+node_modules
+dist
+
+# abstractor2026 的移植代码保持与上游一致（含 JSDoc 与写法），
+# 不套用本项目的 eslint:recommended 规则；升级时整目录覆盖即可。
+src/abstractor

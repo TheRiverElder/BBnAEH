@@ -3,6 +3,7 @@ import VueRouter from 'vue-router';
 import Home from '../views/Home.vue';
 import WorkspacePicker from '../views/WorkspacePicker.vue';
 import Workspace from '../views/Workspace.vue';
+import ImportCache from '../views/ImportCache.vue';
 
 Vue.use(VueRouter);
 
@@ -21,6 +22,11 @@ const routes = [
     path: '/WorkSpace',
     name: 'Workspace',
     component: Workspace
+  },
+  {
+    path: '/ImportCache',
+    name: 'ImportCache',
+    component: ImportCache
   }
 ];
 
